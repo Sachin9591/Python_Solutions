@@ -1,0 +1,15 @@
+import collections
+
+def main():
+  L = int(input())
+  A = list(map(int, input().split()[:L]))
+
+  d = collections.Counter(A)
+  dl = dict(d)
+  max_value = max(list(d.values()))
+  mv = [num for num, freq in dl.items() if freq == max_value]
+  
+  if len(mv) != len(dl):
+    print(''.join(map(str, mv)))
+
+main()
