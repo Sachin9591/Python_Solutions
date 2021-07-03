@@ -1,0 +1,12 @@
+def main():
+
+  L = int(input())
+  A = list(map(int, input().split()[:L]))
+  
+  A.sort()
+  c = 0
+  for i in range(A[0], A[-1]):
+    c += 1
+  print(c)
+
+main()
